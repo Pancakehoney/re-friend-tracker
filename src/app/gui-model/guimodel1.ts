@@ -35,6 +35,13 @@ export class GuiModel {
                             "required": true
                         },
                         {
+                            "id": "nicknamejhj",
+                            "type": "text",
+                            "name": "Nicknamesdf",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
                             "id": "location",
                             "type": "autocomplete",
                             "name": "Location",
@@ -77,11 +84,11 @@ export class GuiModel {
                             "width": 2
                         },
                         {
-                            "id": "activity",
-                            "type": "autocomplete",
+                            "id": "group",
+                            "type": "text",
                             "name": "Activity",
-                            "url": "/activity",
-                            "form": "AddActivityForm",
+                            "url": "/group",
+                            "form": "GroupForm",
                             "width": 2
                         },
                     ]
@@ -97,14 +104,6 @@ export class GuiModel {
                             "name": "LocationName",
                             "width": 2,
                             "required": true
-                        },
-                        {
-                            "id": "comment",
-                            "type": "text",
-                            "name": "Comments",
-                            "width": 2,
-                            "height": 4,
-                            "maxLength": 5000,
                         },
                         {
                             "type": "deleteButton",
@@ -140,14 +139,7 @@ export class GuiModel {
                             "form": "LocationForm",
                             "width": 2
                         },
-                        {
-                            "id": "comment",
-                            "type": "text",
-                            "name": "Comments",
-                            "width": 2,
-                            "height": 4,
-                            "maxLength": 5000,
-                        },
+
                         {
                             "type": "deleteButton",
                             "name": "Delete"
@@ -202,21 +194,6 @@ export class GuiModel {
                             "name": "GroupName",
                             "width": 2,
                             "required": true
-                        },
-                        {
-                            "id": "creationdate",
-                            "type": "date",
-                            "name": "CreationDate",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
-                            "id": "comment",
-                            "type": "text",
-                            "name": "Comments",
-                            "width": 2,
-                            "height": 4,
-                            "maxLength": 5000,
                         },
                         {
                             "type": "deleteButton",
@@ -292,16 +269,6 @@ export class GuiModel {
                             "url": "/friend",
                             "form": {
                                 "form": "FriendForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "icon": "fa-user",
-                            "color": "blue",
-                            "search": true,
-                            "url": "/friend/:friendKey/activity",
-                            "form": {
-                                "form": "AddActivityForm"
                             }
                         },
                     ]
