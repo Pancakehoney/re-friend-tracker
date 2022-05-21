@@ -49,6 +49,14 @@ export class GuiModel {
                             "width": 2
                         },
                         {
+                            "id": "group",
+                            "type": "autocomplete",
+                            "name": "Group",
+                            "url": "/group",
+                            "form": "GroupForm",
+                            "width": 2
+                        },
+                        {
                             "id": "comment",
                             "type": "text",
                             "name": "Comments",
@@ -68,14 +76,7 @@ export class GuiModel {
                             "type": "okButton",
                             "name": "Ok"
                         },
-                        {
-                            "id": "group",
-                            "type": "autocomplete",
-                            "name": "Group",
-                            "url": "/group",
-                            "form": "GroupForm",
-                            "width": 2
-                        },
+                        
                     ]
                 },
                 {
@@ -130,6 +131,12 @@ export class GuiModel {
                             "name": "Location",
                             "url": "/location",
                             "form": "LocationForm",
+                            "width": 2
+                        },
+                        {
+                            "id": "date",
+                            "type": "date",
+                            "name": "Date",
                             "width": 2
                         },
                         {
@@ -337,9 +344,7 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/location",
-                            "form": {
-                                "form": "LocationForm"
-                            }
+                            "page": "locationpage"
                         },
                     ]
                 },
@@ -451,7 +456,6 @@ export class GuiModel {
                             "name": "AddActivity",
                             "icon": "fa-user",
                             "color": "blue",
-                            "url": "/activity",
                             "form": {
                                 "form": "AddActivityForm"
                             }
@@ -462,6 +466,33 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/friend/:friendKey/activity",
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
+                    ]
+                },
+                {
+                    "id": "locationpage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditLocation",
+                            "icon": "fa-user",
+                            "color": "blue",
+                            "form": {
+                                "form": "LocationForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/location/:locationKey/activity",
                             "form": {
                                 "form": "ActivityForm"
                             }
